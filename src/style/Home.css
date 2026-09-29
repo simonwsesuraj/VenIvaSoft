@@ -1,0 +1,295 @@
+/* ==========================================================================
+   VENIVA HERO & HOME SECTION STYLES
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  background: radial-gradient(120% 80% at 50% 0%, #f0f9ff 0%, #ffffff 80%);
+  padding-top: 60px;
+  padding-bottom: 90px;
+  overflow: hidden;
+}
+
+/* Background grid & glows */
+.hero-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(14, 165, 233, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 165, 233, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 40%, #000 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 60% 50% at 50% 40%, #000 60%, transparent 100%);
+  pointer-events: none;
+}
+
+.hero-glow-sphere-1 {
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, rgba(2, 132, 199, 0.03) 70%, transparent 100%);
+  filter: blur(50px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-glow-sphere-2 {
+  position: absolute;
+  bottom: 0px;
+  left: -120px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(186, 230, 253, 0.3) 0%, rgba(240, 249, 255, 0.05) 70%, transparent 100%);
+  filter: blur(60px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Hero Badge */
+.hero-tagline-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid rgba(56, 189, 248, 0.4);
+  padding: 6px 18px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.12);
+  margin-bottom: 24px;
+}
+
+.hero-tagline-badge .badge-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #0ea5e9;
+  box-shadow: 0 0 10px #0ea5e9;
+  animation: pulseGlow 2s infinite;
+}
+
+/* Hero Headline */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  color: #0a2540;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 991px) {
+  .hero-title {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.1rem;
+  }
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  color: #475569;
+  line-height: 1.7;
+  max-width: 560px;
+  margin-bottom: 32px;
+}
+
+/* Stat pills under CTA */
+.hero-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(224, 242, 254, 0.9);
+}
+
+@media (max-width: 768px) {
+  .hero-stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+.hero-stat-card {
+  text-align: left;
+}
+
+.hero-stat-number {
+  font-size: 2.1rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.hero-stat-label {
+  font-size: 0.82rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* Visual Orbit Stage */
+.hero-visual-stage {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orbit-center-emblem {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 40%, #e0f2fe 100%);
+  box-shadow: 
+    0 15px 40px rgba(14, 165, 233, 0.28),
+    0 0 0 12px rgba(224, 242, 254, 0.5),
+    0 0 0 24px rgba(240, 249, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 5;
+}
+
+.orbit-center-emblem img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  filter: drop-shadow(0 8px 18px rgba(2, 132, 199, 0.25));
+}
+
+.orbit-outer-ring {
+  position: absolute;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(56, 189, 248, 0.4);
+  pointer-events: none;
+  animation: spinOrbit 35s linear infinite;
+  z-index: 2;
+}
+
+@media (max-width: 576px) {
+  .orbit-outer-ring {
+    width: 320px;
+    height: 320px;
+  }
+  .orbit-center-emblem {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+/* Floating feature cards in hero stage */
+.hero-floating-card {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(186, 230, 253, 0.8);
+  border-radius: 14px;
+  padding: 12px 18px;
+  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 6;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.hero-floating-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(14, 165, 233, 0.25);
+  border-color: #38bdf8;
+}
+
+.hero-card-1 {
+  top: 15px;
+  left: -20px;
+  animation: floatAnimation 4.5s ease-in-out infinite;
+}
+
+.hero-card-2 {
+  top: 40px;
+  right: -25px;
+  animation: floatAnimation 5s ease-in-out 1s infinite;
+}
+
+.hero-card-3 {
+  bottom: 30px;
+  left: -15px;
+  animation: floatAnimation 5.2s ease-in-out 2s infinite;
+}
+
+.hero-card-4 {
+  bottom: 25px;
+  right: -20px;
+  animation: floatAnimation 4.8s ease-in-out 0.5s infinite;
+}
+
+@media (max-width: 991px) {
+  .hero-floating-card {
+    position: static;
+    margin: 8px 0;
+  }
+  .hero-visual-stage {
+    min-height: auto;
+    padding: 30px 0;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Tech ticker bar */
+.tech-ticker-section {
+  background: #ffffff;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #e0f2fe;
+  padding: 24px 0;
+}
+
+.tech-ticker-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94a3b8;
+  letter-spacing: 0.08em;
+  margin-bottom: 0;
+}
+
+.tech-logo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 9999px;
+  padding: 7px 18px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #334155;
+  transition: all 0.25s ease;
+}
+
+.tech-logo-pill:hover {
+  background: #f0f9ff;
+  border-color: #7dd3fc;
+  color: #0284c7;
+  transform: translateY(-2px);
+}

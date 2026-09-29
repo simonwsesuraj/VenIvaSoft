@@ -1,0 +1,84 @@
+/* ==========================================================================
+   VENIVA CONTACT & FAQ SECTION STYLING
+   ========================================================================== */
+
+.contact-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: 100px 0;
+}
+
+.contact-info-card {
+  background: linear-gradient(135deg, #075985 0%, #0369a1 50%, #0284c7 100%);
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  height: 100%;
+  box-shadow: 0 15px 35px rgba(2, 132, 199, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.form-control-veniva {
+  background-color: #f8fafc;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  color: #1e293b;
+  transition: all 0.25s ease;
+}
+
+.form-control-veniva:focus {
+  background-color: #ffffff;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
+  outline: none;
+}
+
+.faq-item {
+  background: #ffffff;
+  border: 1px solid #e0f2fe;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: #38bdf8;
+}
+
+.faq-question-btn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 18px 22px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #0a2540;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-answer-body {
+  padding: 0 22px 20px 22px;
+  color: #64748b;
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
